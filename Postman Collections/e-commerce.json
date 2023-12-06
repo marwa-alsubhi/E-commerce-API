@@ -1,0 +1,821 @@
+{
+	"info": {
+		"_postman_id": "3bd5a644-4dba-4669-a068-089998709ecb",
+		"name": "e-commerce API",
+		"description": "This is API allows you to order products\n\nAPI : [http://localhost:3002/api](http://localhost:3002/api/products)",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Products",
+			"item": [
+				{
+					"name": "get all products",
+					"id": "20d4b5ee-ea8c-4631-bd6f-246677069236",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "{{baseURL}}/products"
+					},
+					"response": []
+				},
+				{
+					"name": "get  single product by slug",
+					"id": "9da4f9e1-023d-489b-835e-d85b5c72ba42",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseURL}}/products/656761d245f8ac8512ecd5a8"
+					},
+					"response": []
+				},
+				{
+					"name": "create a new product",
+					"id": "56fd62c2-0d0e-4ca2-aac3-3958eabf53c0",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "apple",
+									"type": "text"
+								},
+								{
+									"key": "price",
+									"value": "2400",
+									"type": "text"
+								},
+								{
+									"key": "sold",
+									"value": "22",
+									"type": "text"
+								},
+								{
+									"key": "descriptionId",
+									"value": "hello world",
+									"type": "text"
+								},
+								{
+									"key": "quantity",
+									"value": "1500",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseURL}}/products"
+					},
+					"response": []
+				},
+				{
+					"name": "delete product by slug",
+					"id": "2433d597-b96e-4ce6-ab4f-eb2b9cd7877c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "http://localhost:3002/api/products/laptop"
+					},
+					"response": []
+				},
+				{
+					"name": "update product by slug",
+					"id": "2fe526ad-3813-46f6-a4cd-597564c9829b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "{{baseURL}}/products/laptop"
+					},
+					"response": []
+				},
+				{
+					"name": "get product by pagention",
+					"id": "469520e6-320e-4ed1-a20a-1e696cd7c6f1",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/products?page=8&limit=3",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "8"
+								},
+								{
+									"key": "limit",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "filter products by price",
+					"id": "5e876a77-7bd7-48f9-950d-b343275d8327",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": {
+							"raw": "{{baseURL}}/products?maxPrice=1000&minPrice=500",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"products"
+							],
+							"query": [
+								{
+									"key": "maxPrice",
+									"value": "1000"
+								},
+								{
+									"key": "minPrice",
+									"value": "500"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"id": "d96a4c47-f1bf-40d6-9bc9-d6bb51aace1b"
+		},
+		{
+			"name": "orders",
+			"item": [
+				{
+					"name": "get all orders",
+					"id": "b938146d-7a5d-4c93-9a8d-67370405672c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": "{{baseURL}}/orders"
+					},
+					"response": []
+				},
+				{
+					"name": "get single orders order by id",
+					"id": "5e33aad8-a626-4b5c-aa8f-ec2c52eb4074",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseURL}}/orders/"
+					},
+					"response": []
+				},
+				{
+					"name": "create new order",
+					"id": "968901cb-5802-449d-be0a-d543c1ace26f",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"userId\":\"65684272f42cf85467552fec\",\n  \"shippingAddress\":\"Tabuk \",\n  \"orderItems\": [\n    \n      \"65648072fbdc2851f195e3cd\",\n      \"quantity\":98\n    \n  ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseURL}}/orders"
+					},
+					"response": []
+				},
+				{
+					"name": "update order",
+					"id": "17759d9f-e8f1-4ba7-80ba-e94fd76c342a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "user",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseURL}}/mac-book-pro"
+					},
+					"response": []
+				},
+				{
+					"name": "delete order",
+					"id": "22228cd6-4096-46d7-9d4a-84f686688b04",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{baseURL}}/orders/6567634780f1ecc2b9deae89"
+					},
+					"response": []
+				}
+			],
+			"id": "887dff3f-48bd-4a3f-9cd4-9ff8288669f9",
+			"description": "Handle with orders , CRUD"
+		},
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "get all users",
+					"id": "43995083-dd70-43ee-a1ed-8be607787649",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{baseURL}}/users",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null,
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2",
+									"disabled": true
+								},
+								{
+									"key": "search",
+									"value": "0545151395",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get single users",
+					"id": "5696dca2-e96a-482c-8846-3f8a6efaa62e",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": "{{baseURL}}/users/656a7b3932b29746b9454462"
+					},
+					"response": []
+				},
+				{
+					"name": "create new users",
+					"id": "f81710fb-e8ea-4083-8700-d8ed041325ef",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "danaaa",
+									"type": "text"
+								},
+								{
+									"key": "email",
+									"value": "mrwaff4@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12341234",
+									"type": "text"
+								},
+								{
+									"key": "phone",
+									"value": "0655555544",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseURL}}/users/register"
+					},
+					"response": []
+				},
+				{
+					"name": "login the user",
+					"id": "037874fb-fdc0-46f3-912a-bc616cc58949",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Jawahirah",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "12341234",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "mrwaff4@gmail.com",
+									"type": "text"
+								},
+								{
+									"key": "password",
+									"value": "12341234",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseURL}}/auth/login"
+					},
+					"response": []
+				},
+				{
+					"name": "logout the user",
+					"id": "f86c5c6e-3f64-4fc2-9c42-fad9423866e5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Jawahirah",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "password",
+									"value": "11111111",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "email",
+									"value": "sara@gmail.com",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "phone",
+									"value": "0509989887",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": "{{baseURL}}/auth/logout"
+					},
+					"response": []
+				},
+				{
+					"name": "payment order",
+					"id": "130a0826-32d0-4f94-b4d0-9cd7ffe9e145",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"amount\": 1000,\n  \"currency\": \"usd\",\n  \"payment_method\": \"pm_card_visa\", // Use a test card from Stripe\n  // Add other fields as needed\n  \"userId\":\"656a7b3932b29746b9454462\",\n  \"shipping\" :{\n      \"name\" : \"marwa\",\n      \"phone\": \"0558470612\"\n  }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": "{{baseURL}}/payment/create-checkout-session"
+					},
+					"response": []
+				},
+				{
+					"name": "update user",
+					"id": "afe3fe7c-a25d-403d-9438-482f543943b8",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "marwa alsubhi",
+									"type": "text",
+									"disabled": true
+								},
+								{
+									"key": "isAdmin",
+									"value": "true",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseURL}}/users/656a7b3932b29746b9454462"
+					},
+					"response": []
+				},
+				{
+					"name": "ban a user",
+					"id": "a65d9f83-11c5-4246-a9b2-8962a34bc49a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Batol",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": "{{baseURL}}/users/ban/65684272f42cf85467552fec"
+					},
+					"response": []
+				},
+				{
+					"name": "un ban a user",
+					"id": "e677cdf6-88e7-4c32-92d9-ec196d32921b",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Batol",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						},
+						"url": "{{baseURL}}/users/unban/656a7b3932b29746b9454462"
+					},
+					"response": []
+				},
+				{
+					"name": "delete user",
+					"id": "cf07f7f8-aaa0-47f5-8537-20c977fb6697",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": "{{baseURL}}/users/656889a0dce276897758a0c1"
+					},
+					"response": []
+				},
+				{
+					"name": "activate user",
+					"id": "bba65ffb-5be6-4ab4-be53-4006477ead95",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiZGFuYWFhIiwiZW1haWwiOiJtcndhZmY0QGdtYWlsLmNvbSIsInBhc3N3b3JkIjoiJDJiJDEwJHl0TGNkSDhnSjRLQjRVOUxhU2JEVGVJU2k3NHhCRVlSelZOLmNnTkVBOHRaQXpXRTFhNGdPIiwicGhvbmUiOiIwNjU1NTU1NTQ0IiwiaWF0IjoxNzAxNTMxODM4LCJleHAiOjE3MDE1MzIxMzh9.WA1xR5PyVVnVpU08wE2G_pEWyEB0ScCdPeop4KBRHJk",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/users/activate?",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"users",
+								"activate"
+							],
+							"query": [
+								{
+									"key": "",
+									"value": null
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Forget password",
+					"id": "7d346710-45a6-476f-839c-293d31d0a33a",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmF3YWhpcmFoIiwiZW1haWwiOiJqLXRlc3RAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkS0Y0N1dtaVpQeUQ3V2l3SjFtY3BMLmtNOC96emlIMFVPNUxnT0VGQXc5Mjg3WVVrV0FkQS4iLCJwaG9uZSI6IjA1MDk5ODk4ODciLCJpYXQiOjE3MDEzNDY0NjMsImV4cCI6MTcwMTM0Njc2M30.ZqKipWI1OVZ02k3xXyfk2o5Pq4Wh4fJOOAQxtUusDhk",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseURL}}/users/forget-password"
+					},
+					"response": []
+				},
+				{
+					"name": "Reset password",
+					"id": "8d00ba0a-1b28-4085-ba80-6d64a2a721b2",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJuYW1lIjoiSmF3YWhpcmFoIiwiZW1haWwiOiJqLXRlc3RAZ21haWwuY29tIiwicGFzc3dvcmQiOiIkMmIkMTAkS0Y0N1dtaVpQeUQ3V2l3SjFtY3BMLmtNOC96emlIMFVPNUxnT0VGQXc5Mjg3WVVrV0FkQS4iLCJwaG9uZSI6IjA1MDk5ODk4ODciLCJpYXQiOjE3MDEzNDY0NjMsImV4cCI6MTcwMTM0Njc2M30.ZqKipWI1OVZ02k3xXyfk2o5Pq4Wh4fJOOAQxtUusDhk",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseURL}}/users/forget-password"
+					},
+					"response": []
+				}
+			],
+			"id": "1f14c3a9-ecea-4d27-ad17-3285e6916903"
+		},
+		{
+			"name": "categories",
+			"item": [
+				{
+					"name": "get all categories",
+					"id": "514c7fed-ca87-475e-b411-20a5ebc13711",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": "{{baseURL}}/categories"
+					},
+					"response": []
+				},
+				{
+					"name": "filter products by categories",
+					"id": "13c889ef-ef6d-4db2-9a63-d380f9282d55",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/categories/game-boys",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"categories",
+								"game-boys"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "computer",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "create category",
+					"id": "0df33443-20a6-4480-ac54-fc6813149276",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "Air conditioner2",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/categories",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"categories"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "gameboys",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update category",
+					"id": "a5d4af3c-2e78-467e-855c-63f97fc1390c",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": [
+								{
+									"key": "name",
+									"value": "game boys new",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{baseURL}}/categories/game-boys",
+							"host": [
+								"{{baseURL}}"
+							],
+							"path": [
+								"categories",
+								"game-boys"
+							],
+							"query": [
+								{
+									"key": "name",
+									"value": "game boys new",
+									"type": "text",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete a category",
+					"id": "c3b4ec4f-0c92-4213-9e97-36f3676500fb",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "urlencoded",
+							"urlencoded": []
+						},
+						"url": "{{baseURL}}/categories/air-conditioner2"
+					},
+					"response": []
+				}
+			],
+			"id": "afe7be77-fd54-4a8b-9bb0-d3a34424f8f4"
+		}
+	],
+	"variable": [
+		{
+			"key": "baseURL",
+			"value": "http://localhost:3002/api"
+		}
+	]
+}
