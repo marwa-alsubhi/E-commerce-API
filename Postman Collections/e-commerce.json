@@ -332,7 +332,8 @@
 					"name": "create new users",
 					"id": "f81710fb-e8ea-4083-8700-d8ed041325ef",
 					"protocolProfileBehavior": {
-						"disableBodyPruning": true
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {}
 					},
 					"request": {
 						"method": "POST",
@@ -342,27 +343,33 @@
 							"urlencoded": [
 								{
 									"key": "name",
-									"value": "danaaa",
+									"value": "abduallah ",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "mrwaff4@gmail.com",
+									"value": "mrwaalsubhi@gmail.com",
 									"type": "text"
 								},
 								{
 									"key": "password",
-									"value": "12341234",
+									"value": "$Aa12345",
 									"type": "text"
 								},
 								{
 									"key": "phone",
-									"value": "0655555544",
+									"value": "0558470612",
 									"type": "text"
+								},
+								{
+									"key": "image",
+									"value": "./public/img/no-profile-img-default.webp",
+									"type": "text",
+									"disabled": true
 								}
 							]
 						},
-						"url": "{{baseURL}}/users/register"
+						"url": "http://localhost:3002/api/users/register"
 					},
 					"response": []
 				},
