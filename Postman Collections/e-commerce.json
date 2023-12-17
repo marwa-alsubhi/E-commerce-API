@@ -53,12 +53,12 @@
 							"urlencoded": [
 								{
 									"key": "name",
-									"value": "apple",
+									"value": "marwa",
 									"type": "text"
 								},
 								{
 									"key": "price",
-									"value": "2400",
+									"value": "2200",
 									"type": "text"
 								},
 								{
@@ -67,13 +67,18 @@
 									"type": "text"
 								},
 								{
-									"key": "descriptionId",
-									"value": "hello world",
+									"key": "description",
+									"value": "good laptop",
 									"type": "text"
 								},
 								{
 									"key": "quantity",
 									"value": "1500",
+									"type": "text"
+								},
+								{
+									"key": "categoryId",
+									"value": "65648d1dfbc37ed36c6dc73c",
 									"type": "text"
 								}
 							]
