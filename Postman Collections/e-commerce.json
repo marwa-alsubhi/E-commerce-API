@@ -226,7 +226,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n  \"userId\":\"65684272f42cf85467552fec\",\n  \"shippingAddress\":\"Tabuk \",\n  \"orderItems\": [\n    \n      \"65648072fbdc2851f195e3cd\",\n      \"quantity\":98\n    \n  ]\n}",
+							"raw": "{\n    \"userId\": \"657fdc3dc55ba567c18bd8cc\",\n    \"shippingAddress\": \"Tabuk \",\n    \"orderItems\":[ {\"product\": \"657fdd233565517e1ad62951\" , \"quantity\":55  }]\n    \n\n}",
 							"options": {
 								"raw": {
 									"language": "json"
