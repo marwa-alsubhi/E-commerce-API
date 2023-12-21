@@ -659,6 +659,19 @@
 						"url": "{{baseURL}}/users/forget-password"
 					},
 					"response": []
+				},
+				{
+					"name": "Change Role",
+					"id": "df8707c6-bda8-4f4b-946b-d1b014c6b2b5",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"url": "http://localhost:3002/api/users/changeRole/123"
+					},
+					"response": []
 				}
 			],
 			"id": "1f14c3a9-ecea-4d27-ad17-3285e6916903"
