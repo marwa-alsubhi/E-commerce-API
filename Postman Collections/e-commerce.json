@@ -698,7 +698,7 @@
 								}
 							]
 						},
-						"url": "{{baseURL}}/categories"
+						"url": "http://localhost:3002/api/categories"
 					},
 					"response": []
 				},
