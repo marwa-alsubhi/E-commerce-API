@@ -294,17 +294,20 @@
 							"urlencoded": []
 						},
 						"url": {
-							"raw": "{{baseURL}}/users",
+							"raw": "http://localhost:3002/api/users",
+							"protocol": "http",
 							"host": [
-								"{{baseURL}}"
+								"localhost"
 							],
+							"port": "3002",
 							"path": [
+								"api",
 								"users"
 							],
 							"query": [
 								{
 									"key": "",
-									"value": null,
+									"value": "",
 									"type": "text",
 									"disabled": true
 								},
@@ -794,19 +797,22 @@
 							"urlencoded": [
 								{
 									"key": "name",
-									"value": "game boys new",
+									"value": "mama jabt baloon",
 									"type": "text"
 								}
 							]
 						},
 						"url": {
-							"raw": "{{baseURL}}/categories/game-boys",
+							"raw": "http://localhost:3002/api/categories/6583a5c9af9b530de88b5f4a",
+							"protocol": "http",
 							"host": [
-								"{{baseURL}}"
+								"localhost"
 							],
+							"port": "3002",
 							"path": [
+								"api",
 								"categories",
-								"game-boys"
+								"6583a5c9af9b530de88b5f4a"
 							],
 							"query": [
 								{
