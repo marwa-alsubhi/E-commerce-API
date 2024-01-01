@@ -345,39 +345,46 @@
 					"id": "f81710fb-e8ea-4083-8700-d8ed041325ef",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true,
-						"disabledSystemHeaders": {}
+						"disabledSystemHeaders": {
+							"accept-encoding": true,
+							"accept": true,
+							"user-agent": true
+						}
 					},
 					"request": {
 						"method": "POST",
 						"header": [],
 						"body": {
-							"mode": "urlencoded",
-							"urlencoded": [
+							"mode": "formdata",
+							"formdata": [
 								{
 									"key": "name",
-									"value": "abduallah ",
+									"value": "fofo",
 									"type": "text"
 								},
 								{
 									"key": "email",
-									"value": "mrwaalsubhi@gmail.com",
+									"value": "mrwaff@gmail.com",
 									"type": "text"
 								},
 								{
 									"key": "password",
-									"value": "$Aa12345",
-									"type": "text"
-								},
-								{
-									"key": "phone",
-									"value": "0558470612",
+									"value": "12341234",
 									"type": "text"
 								},
 								{
 									"key": "image",
-									"value": "./public/img/no-profile-img-default.webp",
-									"type": "text",
-									"disabled": true
+									"type": "file",
+									"fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+									"filesNotInWorkingDirectory": [
+										"/Users/marwa/Downloads/background.png"
+									],
+									"value": null
+								},
+								{
+									"key": "phone",
+									"value": "05656775443",
+									"type": "text"
 								}
 							]
 						},
