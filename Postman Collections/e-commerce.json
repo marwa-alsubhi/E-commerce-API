@@ -27,6 +27,23 @@
 					"response": []
 				},
 				{
+					"name": "get Filter products",
+					"id": "af31e5cd-ccf7-4453-8e5e-6a7d5457e255",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": "{{baseURL}}/products"
+					},
+					"response": []
+				},
+				{
 					"name": "get  single product by slug",
 					"id": "9da4f9e1-023d-489b-835e-d85b5c72ba42",
 					"protocolProfileBehavior": {
